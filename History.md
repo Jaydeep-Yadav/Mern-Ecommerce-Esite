@@ -8,3 +8,5 @@
 ## 3. Added Product APIs
 
 ## 4. Done Backend Error Handling
+
+## 5. Added Search, Filter and Pagination
