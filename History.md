@@ -5,3 +5,4 @@
 
 ## 2. Connected to MongoDB
 
+## 3. Added Product APIs
