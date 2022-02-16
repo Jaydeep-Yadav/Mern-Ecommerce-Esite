@@ -13,3 +13,5 @@
 ## 5. Added Search, Filter and Pagination
 
 ## 6. User and Password Authentication Backend
+
+## 7. Backend User Routes APIs
