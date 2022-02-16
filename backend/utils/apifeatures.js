@@ -4,6 +4,7 @@ class ApiFeatures {
         this.queryStr = queryStr;  
     }
 
+    //! Search
     search(){
         const keyword = this.queryStr.keyword ? {
             name:{
@@ -18,6 +19,8 @@ class ApiFeatures {
         return this;
     }
 
+
+    //! Filter
     filter(){
         const queryCopy = {...this.queryStr};
 
@@ -34,6 +37,8 @@ class ApiFeatures {
         return this;
     }
 
+
+    //! Pagination
     pagination(resultPerPage){
         const currentPage = Number(this.queryStr.page) || 1;
         const skip = (currentPage - 1) * resultPerPage;

@@ -3,9 +3,11 @@ const catchAsyncErrors = require("./catchAsyncErrors");
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel");
 
+
+//! isAuthenticatedUser
 exports.isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
   const { token } = req.cookies;
-    //console.log(token);
+  //console.log(token);
 
   if (!token) {
     return next(new ErrorHandler("Please Login to access this resource", 401));
@@ -17,6 +19,8 @@ exports.isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
   next();
 });
 
+
+//! authorizeRoles
 exports.authorizeRoles = (...roles) => {
   return (req, resp, next) => {
     if (!roles.includes(req.user.role)) {

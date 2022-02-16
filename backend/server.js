@@ -22,7 +22,6 @@ const server = app.listen(process.env.PORT,()=>{
 })
 
 
-
 //! Unhandled Promise Rejection
 process.on("unhandledRejection", (err) =>{
     console.log(`Error :${err.message}`);
@@ -31,4 +30,4 @@ process.on("unhandledRejection", (err) =>{
     server.close(()=>{
         process.exit(1);
     });
-})
+});
